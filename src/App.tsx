@@ -2,6 +2,9 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import Prelogin from './pages/prelogin'
+// import SessionPlatform from './components/host-session-page'
+import HostSessionPage from './pages/hostsession'
+import PostLoginPage from './pages/postlogin'
 /* import other pages as you build them
 import Login from '@/pages/login'
 import Dashboard from '@/pages/dashboard'
@@ -16,7 +19,8 @@ const App: React.FC = () => {
 
         {/* Prelogin flow */}
         <Route path="/prelogin" element={<Prelogin />} />
-
+        <Route path= "/post-login" element = {<PostLoginPage /> } /> 
+        <Route path= "/host-session" element = {<HostSessionPage /> } />
         {/* Example additional routes */}
         {/*
         <Route path="/login" element={<Login />} />
