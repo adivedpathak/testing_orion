@@ -1,28 +1,28 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Video, Users, Lightbulb, MessageSquare, Play } from "lucide-react"
+import { Video, Users, Lightbulb, Play } from "lucide-react"
 
 const HostSessionsSection = () => {
   const sessionTypes = [
     {
       icon: Video,
-      title: "Product Webinars",
+      title: "Product Demos",
       description: "Showcase your products to a global audience",
     },
     {
       icon: Lightbulb,
-      title: "Brainstorming Sessions",
+      title: "Panel Discussions /  Podcasts",
       description: "Collaborate on innovative ideas and solutions",
     },
-    {
-      icon: MessageSquare,
-      title: "Feedback Sessions",
-      description: "Get unbiased feedback from fresh perspectives",
-    },
+    // {
+    //   icon: MessageSquare,
+    //   title: "Feedback Sessions",
+    //   description: "Get unbiased feedback from fresh perspectives",
+    // },
     {
       icon: Users,
-      title: "Networking Events",
+      title: "Webinars",
       description: "Connect with like-minded entrepreneurs",
     },
   ]
@@ -32,19 +32,22 @@ const HostSessionsSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <Badge variant="secondary" className="mb-4 text-sm">
-            Host Sessions
+            Online Sessions
           </Badge>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-            Whether you want to{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          Showcase your journey, insights, and innovations.
+
+            {/* <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               promote your products
-            </span>{" "}
-            through webinars
+            </span>{" "} */}
+            {/* through webinars */}
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+          {/* Host impactful webinars, podcasts, panel discussions, or live product demos. */}
+Host impactful webinars, podcasts, panel discussions, or live product demos.
+Or simply tune in to see what other startups are building, solving, and sharing — all in one place.          {/* <p className="text-xl text-gray-600 max-w-4xl mx-auto">
             Or brainstorm new ideas, or get feedback from an unbiased and fresh population mind - we've got you covered
             with our comprehensive session hosting platform
-          </p>
+          </p> */}
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
@@ -99,7 +102,7 @@ const HostSessionsSection = () => {
         </div>
 
         <div className="text-center">
-          <Button
+          {/* <Button
             size="lg"
             className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 mr-4"
           >
@@ -107,7 +110,7 @@ const HostSessionsSection = () => {
           </Button>
           <Button size="lg" variant="outline" className="bg-white text-gray-700 hover:bg-gray-50">
             Browse Sessions
-          </Button>
+          </Button> */}
         </div>
       </div>
     </section>

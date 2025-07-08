@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 function Calltoaction() {
   return (
  <>      {/* Call to Action Banner */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-700 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-r bg-black text-white">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative w-full px-8 md:px-12 lg:px-20 xl:px-32 py-16">
           <div className="text-center w-full">

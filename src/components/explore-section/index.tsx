@@ -1,103 +1,63 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Plane, Wheat, Dna, DollarSign, ShoppingBag, Heart } from "lucide-react"
+import { useState } from "react"
+import {
+  Rocket, Leaf, Shield, Cloud, FlaskConical, HeartPulse, Globe, Database, Gamepad, Bitcoin
+} from "lucide-react" // Replace or add icons as needed
 
-const ExploreSection = () => {
-  const industries = [
-    {
-      icon: Plane,
-      name: "Aerospace",
-      color: "bg-blue-100 text-blue-600 hover:bg-blue-200",
-      startups: "250+",
-    },
-    {
-      icon: Wheat,
-      name: "AgriTech",
-      color: "bg-green-100 text-green-600 hover:bg-green-200",
-      startups: "180+",
-    },
-    {
-      icon: Dna,
-      name: "BioTech",
-      color: "bg-purple-100 text-purple-600 hover:bg-purple-200",
-      startups: "320+",
-    },
-    {
-      icon: DollarSign,
-      name: "FinTech",
-      color: "bg-yellow-100 text-yellow-600 hover:bg-yellow-200",
-      startups: "450+",
-    },
-    {
-      icon: ShoppingBag,
-      name: "Consumer",
-      color: "bg-pink-100 text-pink-600 hover:bg-pink-200",
-      startups: "380+",
-    },
-    {
-      icon: Heart,
-      name: "MedTech",
-      color: "bg-red-100 text-red-600 hover:bg-red-200",
-      startups: "290+",
-    },
-  ]
+const industries = [
+  { icon: Rocket, title: "Aerospace", description: "Innovating flight and space tech." },
+  { icon: Leaf, title: "Agritech", description: "Smart farming and sustainable food." },
+  { icon: Database, title: "Analytics", description: "Turning data into insight." },
+  { icon: Globe, title: "AR/VR", description: "Merging digital and physical reality." },
+  { icon: FlaskConical, title: "Biotech", description: "Life sciences meets tech." },
+  { icon: Bitcoin, title: "Blockchain", description: "Decentralized future of trust." },
+  { icon: HeartPulse, title: "Digital Health", description: "Revolutionizing healthcare." },
+  { icon: Shield, title: "Cybersecurity", description: "Securing digital assets." },
+  { icon: Cloud, title: "Cloud Computing", description: "Scaling innovation in the cloud." },
+  { icon: Gamepad, title: "Gaming", description: "Shaping digital entertainment." },
+  
+]
+
+const StartupIndustries = () => {
+  const [visibleCount, setVisibleCount] = useState(8)
+  const loadMore = () => setVisibleCount((prev) => prev + 8)
+  const hasMore = visibleCount < industries.length
 
   return (
-    <section id="explore" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <Badge variant="secondary" className="mb-4 text-sm">
-            Explore Opportunities
-          </Badge>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-            Explore from amongst{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              1000s of Startups
-            </span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-            Discover collaboration opportunities, expand your market reach, gain valuable knowledge, build credibility,
-            and drive innovation across diverse industries
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {industries.map((industry, index) => {
-            const IconComponent = industry.icon
-            return (
-              <Card
-                key={index}
-                className="group hover:shadow-xl transition-all duration-300 cursor-pointer border-0 shadow-lg"
-              >
-                <CardContent className="p-6 text-center">
-                  <div
-                    className={`inline-flex p-4 rounded-full ${industry.color} mb-4 group-hover:scale-110 transition-transform duration-300`}
-                  >
-                    <IconComponent className="h-8 w-8" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{industry.name}</h3>
-                  <p className="text-gray-600 mb-4">{industry.startups} startups</p>
-                  <Button variant="outline" size="sm" className="group-hover:bg-blue-50 group-hover:border-blue-300">
-                    Explore
-                  </Button>
-                </CardContent>
-              </Card>
-            )
-          })}
-        </div>
-
-        <div className="text-center">
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-          >
-            View All Industries
-          </Button>
-        </div>
+    <section className="py-16 px-4 sm:px-6 lg:px-20 bg-white text-gray-900">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl font-bold mb-4">Explore Startup Industries</h2>
+        <p className="text-gray-600 max-w-2xl mx-auto">Explore diverse sectors driving startup innovation across tech, health, energy, and more.</p>
       </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        {industries.slice(0, visibleCount).map((item, index) => (
+          <div
+            key={index}
+            className="bg-white border border-gray-200 shadow-sm rounded-2xl p-5 hover:shadow-md transition-all"
+          >
+            <div className="flex items-center space-x-3 mb-3">
+              <div className="p-2 rounded-md bg-purple-100 text-purple-600">
+                <item.icon className="h-5 w-5" />
+              </div>
+              <h3 className="text-lg font-semibold">{item.title}</h3>
+            </div>
+            <p className="text-gray-500 text-sm">{item.description}</p>
+          </div>
+        ))}
+      </div>
+
+      {hasMore && (
+        <div className="text-center mt-10">
+          <button
+            onClick={loadMore}
+            className="px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-full text-sm font-semibold transition"
+          >
+            Load More
+          </button>
+        </div>
+      )}
     </section>
   )
 }
 
-export default ExploreSection
+export default StartupIndustries

@@ -40,11 +40,11 @@ const HeroSection: React.FC = () => {
         }`}
       >
         <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-          <span className="inline-block">Where Innovation</span>
+          <span className="inline-block">Where Innovation Meet Opportunites</span>
           <br />
-          <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-emerald-500 bg-clip-text text-transparent inline-block">
-            Meets Opportunity
-          </span>
+          {/* <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-emerald-500 bg-clip-text text-transparent inline-block">
+           
+          </span> */}
         </h1>
 
         <p
@@ -57,7 +57,7 @@ const HeroSection: React.FC = () => {
           technology.
         </p>
 
-        <button
+        {/* <button
           className={`group bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-full px-12 py-6 text-lg font-semibold shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 ease-out ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
@@ -65,7 +65,7 @@ const HeroSection: React.FC = () => {
         >
           <span className="relative z-10">Register Now</span>
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-700 to-purple-700 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        </button>
+        </button> */}
       </div>
 
       {/* Scroll Indicator */}

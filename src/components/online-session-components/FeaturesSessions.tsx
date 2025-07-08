@@ -104,7 +104,7 @@ function FeaturesSessions() {
                    <div className="space-y-2 text-sm text-gray-600">
                      <div className="flex items-center">
                        <Users className="h-4 w-4 mr-2 text-purple-500" />
-                       <span className="font-medium">{session.host}</span>
+                       {/* <span className="font-medium">{session.host}</span> */}
                      </div>
                      <div className="flex items-center">
                        <Calendar className="h-4 w-4 mr-2 text-blue-500" />

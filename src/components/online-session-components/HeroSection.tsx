@@ -1,9 +1,6 @@
 
 
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-
-import { Search, Users, Calendar, Star, TrendingUp } from "lucide-react"
+import {  Users, Calendar, Star, TrendingUp } from "lucide-react"
 
 
 function HeroSection() {
@@ -32,7 +29,7 @@ function HeroSection() {
             </p>
 
             {/* Search Bar */}
-            <div className="relative w-full max-w-4xl mx-auto mb-12">
+            {/* <div className="relative w-full max-w-4xl mx-auto mb-12">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-blue-500 h-5 w-5" />
                 <Input
@@ -44,10 +41,10 @@ function HeroSection() {
                   Search
                 </Button>
               </div>
-            </div>
+            </div> */}
 
             {/* Simple Stats */}
-            <div className="flex justify-center space-x-8 text-sm text-gray-500">
+            {/* <div className="flex justify-center space-x-8 text-sm text-gray-500">
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
                 <span>10K+ Active Members</span>
@@ -60,7 +57,7 @@ function HeroSection() {
                 <div className="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
                 <span>50K+ Connections</span>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
