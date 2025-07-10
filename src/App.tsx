@@ -6,7 +6,7 @@ import Prelogin from './pages/prelogin'
 import OnlineSessionPage from './pages/onlinesession'
 import PostLoginPage from './pages/postlogin'
 import ViewSession from './pages/ViewSession'
-import HostSessionForms from './pages/HostSession'
+import HostSessionForms from './pages/hostsession'
 import { Rocket } from 'lucide-react'
 import StartupListing from './pages/Explore'
 /* import other pages as you build them
